@@ -1,0 +1,57 @@
+rlm_partner:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RlmPartner
+    module:               partner
+    prefix_path:          /partner
+    column:               id
+    with_wildcard_routes: true
+
+rlm_good_deal:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RlmGoodDeal
+    module:               goodDeal
+    prefix_path:          /goodDeal
+    column:               id
+    with_wildcard_routes: true
+
+rlm_news:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RlmNews
+    module:               news
+    prefix_path:          /news
+    column:               id
+    with_wildcard_routes: true
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+
+
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: news, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

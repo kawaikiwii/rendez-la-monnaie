@@ -1,0 +1,34 @@
+RlmPartner:
+  3suisses:
+    name: 3 suisses
+    type: E-commerce
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet ullamcorper magna ut suscipit. Nullam ut consectetur odio. Etiam quam nisl, laoreet at lacinia eu, faucibus volutpat sapien. 
+    logo_l: /images/recent-img1.gif
+    logo_b: /images/projectimg0.jpg
+
+  laredoute:
+    name: La redoute
+    type: E-commerce
+    description: Fusce hendrerit lacus at nulla tincidunt porta. Duis volutpat vehicula feugiat. Vestibulum vestibulum facilisis vestibulum. Nunc nunc purus, rhoncus at accumsan mollis, congue ac arcu. Sed augue lorem, laoreet quis ornare non, aliquet sodales libero.
+    logo_l: /images/recent-img2.gif
+    logo_b: /images/projectimg1.jpg
+  betclic:
+    name: Betclic
+    type: Jeux
+    description: Curabitur et mi eu dolor sollicitudin suscipit. Sed consequat accumsan nisi, vitae convallis lectus consequat nec. Aliquam a diam tortor, a lobortis massa. Sed urna leo, euismod id aliquet in, vulputate in nulla. Morbi vel sagittis ante.
+    logo_l: /images/recent-img1.gif
+    logo_b: /images/projectimg2.jpg
+
+  nike:
+    name: Nike
+    type: E-commerce
+    description: Des godasses super, et des chinois qui bossent pas cher !
+    logo_l: /images/recent-img2.gif
+    logo_b: /images/projectimg3.jpg
+
+  adidas:
+    name: Adidas
+    type: Hi-tech
+    description: Des sweets incroyables fait par des pakistanais, mais presque ...
+    logo_l: /images/recent-img3.gif
+    logo_b: /images/projectimg1.jpg

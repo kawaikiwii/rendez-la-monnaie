@@ -1,0 +1,47 @@
+RlmGoodDeal:
+  gooddeal1:
+    RlmPartner: betclic
+    type: Promotion
+    title: Phasellus porta
+    content: |
+      Phasellus porta tortor sed lectus porttitor sagittis.
+      Vivamus vel lorem at massa malesuada laoreet. Nunc condimentum consectetur
+    homepage: true
+  gooddeal2:
+    RlmPartner: laredoute
+    type: Cadeau
+    title: Vestibulum augue
+    content: |
+      Vestibulum augue diam, venenatis in euismod at, varius at arcu. Phasellus
+      scelerisque
+    homepage: true
+  gooddeal3:
+    RlmPartner: 3suisses
+    type: Reduction
+    title: Sed sodales consectetur
+    content: Sed sodales consectetur urna ut vehicula. Curabitur iaculis enim in enim dictum non.
+    homepage: true
+  gooddeal4:
+    RlmPartner: 3suisses
+    type: Reduction
+    title: Reduction 2 !
+    content: La réduction 2 est magnifique.
+    homepage: true
+  gooddeal5:
+    RlmPartner: 3suisses
+    type: Reduction
+    title: Reduction 3 !
+    content: La réduction 3 est splendide.
+    homepage: false
+  gooddeal6:
+    RlmPartner: nike
+    type: Promotion
+    title: Aenean vulputate
+    content: Aenean vulputate nibh et dolor ultrices egestas.
+    homepage: true
+  gooddeal7:
+    RlmPartner: adidas
+    type: Promotion
+    title: Quisque ut
+    content: Quisque ut tincidunt tortor. Aenean dictum, sapien id ullamcorper
+    homepage: true

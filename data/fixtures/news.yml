@@ -1,0 +1,41 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+RlmNews:
+  news1:
+    type: Site
+    title: Inauguration du site!
+    content: |
+      C’est avec une joie non dissimulée que nous avons le plaisir d’annoncer le lancement de Rendez-La-Monnaie (RLM pour les intimes)!
+      Des bons plans, des actus, des articles spécialisés directement dans votre boite email chaque semaine.
+      Restez à l’écoute, le site va rapidement évoluer! Beaucoup de surprises vous attendent, les premiers inscrits seront les premiers à en profiter.
+  news2:
+    type: Site
+    title: Les inscriptions sont ouvertes!
+    content: |
+      N’attendez pas, venez découvrir tout ce que nous pouvons faire pour vous faire économiser du temps et de l’argent!
+      Rappel: les premiers inscrits auront de nombreux avantages avec les prochaines versions du site!
+  news3:
+    type: Site
+    title: Mise en place du formulaire de contact
+    content: |
+      Vous pouvez désormais nous faire part de vos remarques ou nous poser des questions via l’onglet « Contact », n’hésitez pas, nous sommes là pour ça. Si vous êtes gentils nous vous dévoileront peut-être une information exclusive sur la prochaine version, mais chuut, ça reste entre nous!
+  news4:
+    type: Site
+    title: Mise en place du formulaire de contact 2
+    content: |
+      Vous pouvez désormais nous faire part de vos remarques ou nous poser des questions via l’onglet « Contact 2», n’hésitez pas, nous sommes là pour ça. Si vous êtes gentils nous vous dévoileront peut-être une information exclusive sur la prochaine version, mais chuut, ça reste entre nous (copie)!

@@ -1,0 +1,1 @@
+<?php echo get_partial('login/login_form', array('form' => $form)) ?>

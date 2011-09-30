@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           RlmNews
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          rlm_news
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        created_at:
+          required: false
+      list:
+        title: Liste des news
+      filter:
+        display: [type, title, content, link]
+      form:    ~
+      edit:
+        display: [type, title, content, link]
+      new:
+        display: [type, title, content, link]
+        fields:
+          created_at:
+            required: false

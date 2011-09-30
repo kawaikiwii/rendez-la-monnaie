@@ -1,0 +1,49 @@
+#category de news
+#RlmCategory:
+#  actAs: { Timestampable: ~ }
+#  columns:
+#    name: { type: string(255), notnull: true, unique: true }
+
+RlmPartner:
+  actAs: { Timestampable: ~ }
+  columns:
+    type: { type: enum, values: ['E-commerce','Jeux','Hi-tech'] }
+    name: { type: string(255), notnull: true }
+    description: { type: string(4000), notnull: true }
+    logo_l: { type: string(255), notnull: true}
+    logo_b: { type: string(255), notnull: true}
+
+
+
+RlmGoodDeal:
+  actAs: {Timestampable: ~}
+  columns:
+    partner_id: { type: integer, notnull: true }
+    type: { type: enum, values: ['Promotion','Cadeau','Reduction'] }
+    title: { type: string(250) }
+    content: { type: string(4000), notnull: true}
+    homepage: { type: boolean, notnull: true , default: 1}
+  relations:
+    RlmPartner: {onDelete: CASCADE, local: partner_id, foreign: id, foreignAlias: RlmPartner }
+
+RlmNews:
+  actAs: {Timestampable: ~}
+  columns:
+    type: { type: enum, values: ['Site','Nouveau Partenaire','Nouveau Bon Plan'] }
+    title: { type: string(255), notnull: true }
+    content: { type: string(4000), notnull: true }
+    link: { type: string(255)}
+    
+    
+RlmContact:
+  actAs: {Timestampable: ~}
+  columns:
+    first_name: { type: string(255), notnull: true }
+    last_name: { type: string(255), notnull: true }
+    address: { type: string(2000), notnull: true }
+    phone_number: { type: string(255), notnull: true }
+    email_address:
+      type: string(255) 
+      notnull: true
+      unique: true
+    question: { type: string(10000), notnull: true }

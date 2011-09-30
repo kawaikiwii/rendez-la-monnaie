@@ -1,0 +1,98 @@
+#rlm_actu:
+#  class: sfDoctrineRouteCollection
+#  options:
+#    model:                RlmActu
+#    module:               actu
+#    prefix_path:          /actu
+#    column:               id
+#    with_wildcard_routes: true
+
+#rlm_good_deal:
+#  class: sfDoctrineRouteCollection
+#  options:
+#    model:                RlmGoodDeal
+#    module:               goodDeal
+#    prefix_path:          /bon-plans
+#    column:               id
+#    with_wildcard_routes: true
+
+
+#rlm_show_good_deal:
+#  url:     /bon-plans-:id
+#  class:   sfDoctrineRoute
+#  options: { model: RlmGoodDeal, type: object }
+#  param:   { module: goodDeal, action: show }
+#  requirements:
+#    id: \d+
+#    sf_method: [get]
+
+#rlm_contact:
+#  class: sfDoctrineRouteCollection
+#  options:
+#    model:                RlmContact
+#    module:               contact
+#    prefix_path:          /contact
+#    column:               id
+#    with_wildcard_routes: true
+
+#rlm_partner:
+#  class: sfDoctrineRouteCollection
+#  options:
+#    model:                RlmPartner
+#    module:               partner
+#    prefix_path:          /partner
+#    column:               id
+#    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: home, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+#default_index:
+#  url:   /:module
+#  param: { action: index }
+
+default:
+  url:   /:module/:action
+
+rlm_login:
+  url:   /signin
+  param: { module: login, action: login  }
+
+#sf_guard_signin:
+#  url:   /signin
+#  param: { module: login, action: login }
+
+#sf_guard_signin:
+#  url:   /login
+#  param: { module: sfGuardAuth, action: signin }
+        
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+        
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+
+sf_guard_register:
+  url:   /register
+  param: { module: sfGuardRegister, action: index }
+
+rlm_search:
+  url: /bon-plans
+  param: { module: goodDeal, action: search }
+
+rlm_contact:
+  url: /contact
+  param: { module: contact, action: new }
+
+rlm_faq:
+  url: /comment-ca-marche
+  param: { module: faq, action: index }
