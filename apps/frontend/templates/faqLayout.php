@@ -29,9 +29,9 @@
 				<div class="top-links floatr">
 					<ul>
                                             <li><a href="<?php echo url_for('@homepage') ?>"> <span>Accueil</span></a></li>
-                                            <li><a href="<?php echo url_for('@rlm_faq') ?>"><span>FAQ</span></a></li>
+                                            <li><a href="<?php echo url_for('@rlm_faq') ?>" class="active"><span>FAQ</span></a></li>
                                             <li><a href="<?php echo url_for('@rlm_search') ?>"><span>Bon Plans</span></a></li>
-                                            <li><a href="<?php echo url_for('@rlm_contact') ?>" class="active"><span>Contact</span></a></li>
+                                            <li><a href="<?php echo url_for('@rlm_contact') ?>"><span>Contact</span></a></li>
 					</ul>
 					<div class="clear"></div>			
 				</div>
