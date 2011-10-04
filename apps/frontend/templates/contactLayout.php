@@ -37,11 +37,9 @@
 				</div>
 				<div class="clear"></div>
 			</div>
-                    <?php //echo $sf_flash->getFlash('notice') ?>
-			<?php if ($sf_user->hasFlash('notice')): ?>
+                    	<?php if ($sf_user->hasFlash('notice')): ?>
 			<div class="flash_notice">
 				<?php echo $sf_user->getFlash('notice') ?>
-
 			</div>
 			<?php endif ?>
 			<?php if ($sf_user->hasFlash('error')): ?>
@@ -49,16 +47,18 @@
 			    <?php echo $sf_user->getFlash('error') ?>
 			</div>
 			<?php endif ?>
-                        <?php
-                            //echo $sf_content;
-                        ?>
                         <div class="content-box">
-                            <?php echo include_component('news', 'listContact'); ?>
+                            <div class="col-2 floatl">
+                                <img src="/images/recent-icon.gif" alt="" class="floatl" />
+                                <h1>Promos de la semaine</h1>
+                                <span>D&eacute;couvrez la s&eacute;lection des offres de la semaine :</span>
+                                <div class="clear"></div>
+                                <?php echo include_component('goodDeal', 'list'); ?>
+                            </div>
                             <div class="col-inner floatl">
                                 <?php
                                             echo $sf_content;
                                 ?>
-                                
                             </div>
                             <div class="clear"></div>
                         </div>
