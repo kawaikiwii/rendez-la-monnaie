@@ -16,5 +16,5 @@ default:
 
   javascripts:    []
   has_layout:     true
-  layout:         contactLayout
+  layout:         faqLayout
   stylesheets:    [home.css]
