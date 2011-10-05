@@ -9,12 +9,12 @@
             <option value="high-tech" >High-tech</option>
             <option value="e-commerce" >E-commerce</option>
         </select>
-        <select name="type_bp" id="state" tabindex="5">
+        <!--<select name="type_bp" id="state" tabindex="5">
             <option>Type d'offre</option>
             <option value="promotion">Promotion</option>
             <option value="reduction">R&eacute;duction</option>
             <option value="cadeau">Cadeau</option>
-        </select>
+        </select>-->
         </div>
         <div class="ok">
             <input type="submit" class="button2" value="RECHERCHER" />

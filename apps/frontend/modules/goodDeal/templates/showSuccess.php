@@ -8,10 +8,10 @@
       <th>Partner:</th>
       <td><?php echo $rlm_good_deal->getPartnerId() ?></td>
     </tr>
-    <tr>
+    <!--<tr>
       <th>Type:</th>
-      <td><?php echo $rlm_good_deal->getType() ?></td>
-    </tr>
+      <td><?php //echo $rlm_good_deal->getType() ?></td>
+    </tr>-->
     <tr>
       <th>Content:</th>
       <td><?php echo $rlm_good_deal->getContent() ?></td>
