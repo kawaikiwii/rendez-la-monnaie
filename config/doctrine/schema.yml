@@ -19,7 +19,8 @@ RlmGoodDeal:
   actAs: {Timestampable: ~}
   columns:
     partner_id: { type: integer, notnull: true }
-    type: { type: enum, values: ['Promotion','Cadeau','Reduction'] }
+    #Mis en commentaire car inutile pour l'instant
+    #type: { type: enum, values: ['Promotion','Cadeau','Reduction'] }
     title: { type: string(250) }
     content: { type: string(4000), notnull: true}
     homepage: { type: boolean, notnull: true , default: 1}

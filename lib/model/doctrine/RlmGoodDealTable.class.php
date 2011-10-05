@@ -30,7 +30,6 @@ class RlmGoodDealTable extends Doctrine_Table
 
     public function searchGoodDeals(sfWebRequest $request){
 
-
         $query = Doctrine_Query::create()
         ->from('RlmGoodDeal gd')
         ->leftJoin('gd.RlmPartner p')
@@ -40,10 +39,9 @@ class RlmGoodDealTable extends Doctrine_Table
         if($request->getParameter('type_p') != "Thématiques" && $request->getParameter('type_p') != "")
            $query->addWhere('p.type ="'.$request->getParameter('type_p').'"');
 
-        if($request->getParameter('type_bp') != "Type d'offre" && $request->getParameter('type_bp') != "")
-           $query->addWhere('gd.type ="'.$request->getParameter('type_bp').'"');
-
-
+        //Mis en commentaire ccar inutile pour l'instant
+        /*if($request->getParameter('type_bp') != "Type d'offre" && $request->getParameter('type_bp') != "")
+           $query->addWhere('gd.type ="'.$request->getParameter('type_bp').'"');*/
 
     	return $query->execute();
     }
