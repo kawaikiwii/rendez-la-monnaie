@@ -1,5 +1,4 @@
 <label for="recherche">RECHERCHER PAR MOT CLÉ:</label>
-
     <form action="<?php echo url_for('@rlm_search') ?>" method="post">
         <input type="text" name="recherche" tabindex="2" value="<?php echo (!empty($parametre['recherche'])) ? $parametre['recherche'] : ""; ?>" />
 
@@ -9,12 +8,13 @@
                 <option value="hi-tech" <?php echo ($parametre['type_p'] == 'hi-tech') ? "selected" : ""; ?>>Hi-tech</option>
                 <option value="e-commerce" <?php echo ($parametre['type_p'] == 'e-commerce') ? "selected" : ""; ?>>E-commerce</option>
         </select>
-        <select name="type_bp" id="state" tabindex="5">
+        <!-- types de bons plans inutiles pour l'instant ... -->
+        <!--<select name="type_bp" id="state" tabindex="5">
             <option>Type d'offre</option>
             <option value="promotion" <?php echo ($parametre['type_bp'] == 'promotion') ? "selected" : ""; ?>>Promotion</option>
             <option value="reduction" <?php echo ($parametre['type_bp'] == 'reduction') ? "selected" : ""; ?>>R&eacute;duction</option>
             <option value="cadeau" <?php echo ($parametre['type_bp'] == 'cadeau') ? "selected" : ""; ?>>Cadeau</option>
-        </select>
+        </select>-->
         </div>
         <div class="ok">
             <input type="submit" class="button2" value="RECHERCHER" />
