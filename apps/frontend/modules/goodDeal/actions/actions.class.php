@@ -20,7 +20,11 @@ class goodDealActions extends sfActions
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->rlm_good_deal = Doctrine_Core::getTable('RlmGoodDeal')->find(array($request->getParameter('id')));
+    $this->rlm_good_deal = Doctrine_Core::getTable('RlmGoodDeal')
+      ->createQuery('a')
+      ->addWhere('a.title LIKE "%'.$request->getParameter('title').'%"')
+      ->execute();
+    
     $this->forward404Unless($this->rlm_good_deal);
   }
 

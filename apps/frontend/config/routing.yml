@@ -7,23 +7,23 @@
 #    column:               id
 #    with_wildcard_routes: true
 
-#rlm_good_deal:
-#  class: sfDoctrineRouteCollection
-#  options:
-#    model:                RlmGoodDeal
-#    module:               goodDeal
-#    prefix_path:          /bon-plans
-#    column:               id
-#    with_wildcard_routes: true
+rlm_good_deal:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RlmGoodDeal
+    module:               goodDeal
+    prefix_path:          /bon-plans
+    column:               id
+    with_wildcard_routes: true
 
 
 rlm_show_good_deal:
-  url:     /goodDeal/:title
+  url:     /bon-plan/:title
   class:   sfDoctrineRoute
   options: { model: RlmGoodDeal, type: object }
   param:   { module: goodDeal, action: show }
   requirements:
-    title: \d+
+    #title: \d+
     sf_method: [get]
 
 #rlm_contact:

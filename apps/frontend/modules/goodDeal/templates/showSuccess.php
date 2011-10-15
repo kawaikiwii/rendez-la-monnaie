@@ -1,12 +1,14 @@
+<?php foreach($rlm_good_deal as $gd):?>
+
 <table>
   <tbody>
     <tr>
       <th>Id:</th>
-      <td><?php echo $rlm_good_deal->getId() ?></td>
+      <td><?php echo $gd->getId() ?></td>
     </tr>
     <tr>
       <th>Partner:</th>
-      <td><?php echo $rlm_good_deal->getPartnerId() ?></td>
+      <td><?php echo $gd->getPartnerId() ?></td>
     </tr>
     <!--<tr>
       <th>Type:</th>
@@ -14,21 +16,22 @@
     </tr>-->
     <tr>
       <th>Content:</th>
-      <td><?php echo $rlm_good_deal->getContent() ?></td>
+      <td><?php echo $gd->getContent() ?></td>
     </tr>
     <tr>
       <th>Created at:</th>
-      <td><?php echo $rlm_good_deal->getCreatedAt() ?></td>
+      <td><?php echo $gd->getCreatedAt() ?></td>
     </tr>
     <tr>
       <th>Updated at:</th>
-      <td><?php echo $rlm_good_deal->getUpdatedAt() ?></td>
+      <td><?php echo $gd->getUpdatedAt() ?></td>
     </tr>
   </tbody>
 </table>
 
 <hr />
 
-<a href="<?php echo url_for('goodDeal/edit?id='.$rlm_good_deal->getId()) ?>">Edit</a>
+<a href="<?php echo url_for('goodDeal/edit?id='.$gd->getId()) ?>">Edit</a>
 &nbsp;
 <a href="<?php echo url_for('goodDeal/index') ?>">List</a>
+<?php endforeach;?>
