@@ -13,7 +13,7 @@
                 <div class="header">
                         <div class="login">
                                 <?php if($sf_user->isAuthenticated()): ?>
-                                        <?php echo 'Bienvenue '.$sf_user->getUsername().' '.link_to('Mon compte', 'sf_guard_register').' '.link_to('D&eacute;connexion', 'sf_guard_signout');?>
+                                        <?php echo 'Bienvenue '.$sf_user->getUsername().' '.link_to('Mon compte', 'sf_guard_account').' '.link_to('D&eacute;connexion', 'sf_guard_signout');?>
                                 <?php else : ?>
                                         <?php
                                             echo include_component('login', 'login_form');

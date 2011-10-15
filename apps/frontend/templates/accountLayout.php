@@ -13,22 +13,22 @@
 			<div class="header">
 				<div class="login">
 					<?php if($sf_user->isAuthenticated()): ?>
-						<?php echo 'Bienvenue '.$sf_user->getUsername().' '.link_to('Mon compte', 'sf_guard_register').' '.link_to('D&eacute;connexion', 'sf_guard_signout');?>
+						<?php echo $sf_user->getUsername().' '.link_to('D&eacute;connexion', 'sf_guard_signout').'<br />';?>
 					<?php else : ?>
-						<?php
-                                                    echo include_component('login', 'login_form');
-                                                ?>
-					<?php endif; ?>                                         
+						<?php 
+							echo include_component('login', 'login_form');
+						?>
+					<?php endif; ?>				
 				</div>			
 				<div class="logo floatl">
 					<a href="<?php echo url_for('@homepage') ?>">
-						<img src="/images/logo.gif" alt="" />
+						<img src="../images/logo.gif" alt="" />
 					</a>
 				</div>
 				<div class="top-links floatr">
 					<ul>
                                             <li><a href="<?php echo url_for('@homepage') ?>"> <span>Accueil</span></a></li>
-                                            <li><a href="<?php echo url_for('@rlm_faq') ?>" class="active"><span>FAQ</span></a></li>
+                                            <li><a href="<?php echo url_for('@rlm_faq') ?>"><span>FAQ</span></a></li>
                                             <li><a href="<?php echo url_for('@rlm_search') ?>"><span>Bon Plans</span></a></li>
                                             <li><a href="<?php echo url_for('@rlm_contact') ?>"><span>Contact</span></a></li>
 					</ul>
@@ -36,7 +36,7 @@
 				</div>
 				<div class="clear"></div>
 			</div>
-                    	<?php if ($sf_user->hasFlash('notice')): ?>
+			<?php if ($sf_user->hasFlash('notice')): ?>
 			<div class="flash_notice">
 				<?php echo $sf_user->getFlash('notice') ?>
 			</div>
@@ -45,23 +45,32 @@
 			<div class="flash_error">
 			    <?php echo $sf_user->getFlash('error') ?>
 			</div>
-			<?php endif ?>
-                        <div class="content-box">
-                            <div class="col-2 floatl">
-                                <img src="/images/recent-icon.gif" alt="" class="floatl" />
-                                <h1>Promos de la semaine</h1>
-                                <span>D&eacute;couvrez la s&eacute;lection des offres de la semaine :</span>
-                                <div class="clear"></div>
-                                <?php echo include_component('goodDeal', 'list'); ?>
-                            </div>
-                            <div class="col-inner floatl">
-                                <?php
-                                            echo $sf_content;
-                                ?>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-
+			<?php endif ?>			
+			<div class="content-box">
+				<div class="col-2 floatl">
+                                    <img src="/images/recent-icon.gif" alt="" class="floatl" />
+                                    <h1>Promos de la semaine</h1>
+                                    <span>D&eacute;couvrez la s&eacute;lection des offres de la semaine :</span>
+                                    <div class="clear"></div>
+                                    <?php echo include_component('goodDeal', 'list'); ?>
+                                </div>
+				<div class="col-inner floatl">
+					<div>
+						<div></div>
+						<div>
+				        	
+				 			<div class="formulaire">
+				 			  	<?php echo $sf_content;?>
+				            </div>
+				        </div>
+				        <div>
+				        	<p><br /></p>
+				        </div>
+					</div>
+					<div class="clear"></div>
+				</div>				 
+				<div class="clear"></div>
+			</div> 
 			<?php echo get_partial('home/footer'); ?>
 		</div>
 	</body>
