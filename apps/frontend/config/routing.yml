@@ -7,14 +7,14 @@
 #    column:               id
 #    with_wildcard_routes: true
 
-rlm_good_deal:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                RlmGoodDeal
-    module:               goodDeal
-    prefix_path:          /bon-plans
-    column:               id
-    with_wildcard_routes: true
+#rlm_good_deal:
+#  class: sfDoctrineRouteCollection
+#  options:
+#    model:                RlmGoodDeal
+#    module:               goodDeal
+#    prefix_path:          /bon-plans
+#    column:               id
+#    with_wildcard_routes: true
 
 
 rlm_show_good_deal:
