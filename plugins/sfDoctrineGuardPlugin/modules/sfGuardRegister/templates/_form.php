@@ -1,7 +1,10 @@
 <?php use_helper('I18N') ?>
-
-<form action="<?php echo url_for('@sf_guard_register') ?>" method="post">
-
+<!-- Si authentifié, on le redirige vers la page de son compte et non vers l'inscription -->
+<?php if($sf_user->isAuthenticated()): ?>
+    <form action="<?php echo url_for('@sf_guard_account') ?>" method="post">
+<?php else: ?>
+    <form action="<?php echo url_for('@sf_guard_register') ?>" method="post">
+<?php endif;?>
 <?php echo $form['_csrf_token'] ?>
 <table width="97%">
 	<tr>
@@ -53,23 +56,36 @@
     <tr>
         <td><?php echo $form['username']->renderError() ?></td>
     </tr>
-    <tr>
-        <td align="left" valign="top" class="fontform" id="Email"><strong><?php echo $form['password']->renderLabel() ?></strong></td>
-        <td align="left" valign="top"><?php echo $form['password'] ?></td>
-    </tr>
-    <tr>
-        <td><?php echo $form['password']->renderError() ?></td>
-    </tr>
-    <tr>
-        <td align="left" valign="top" class="fontform" id="Email"><strong><?php echo $form['password_again']->renderLabel() ?></strong></td>
-        <td align="left" valign="top"><?php echo $form['password_again'] ?></td>
-    </tr>
-    <tr>
-        <td><?php echo $form['password_again']->renderError() ?></td>
-    </tr>
+    
+    <!-- Si authentifié, on ne redemande pas le mdp -->
+    <?php if(!$sf_user->isAuthenticated()): ?>
+        <tr>
+            <td align="left" valign="top" class="fontform" id="Email"><strong><?php echo $form['password']->renderLabel() ?></strong></td>
+            <td align="left" valign="top"><?php echo $form['password'] ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $form['password']->renderError() ?></td>
+        </tr>
+        <tr>
+            <td align="left" valign="top" class="fontform" id="Email"><strong><?php echo $form['password_again']->renderLabel() ?></strong></td>
+            <td align="left" valign="top"><?php echo $form['password_again'] ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $form['password_again']->renderError() ?></td>
+        </tr>
+    <?php else: ?>
+        <tr>
+            <td align="left" valign="top" class="fontform" id="Email"><strong><?php echo $form['password']->renderLabel() ?></strong></td>
+            <td align="left" valign="top"><?php echo $form['password'] ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $form['password']->renderError() ?></td>
+        </tr>
+    <?php endif;?>
+    
     <tr>
         <td colspan="2">
-          <input border="0" border-color="#FFF" id="stylebtn" align="absbottom" type="image" name="register" value="<?php echo __('J\'en profite !', null, 'sf_guard') ?>" src="../images/bt.gif" />
+          <input border="0" border-color="#FFF" id="stylebtn" align="absbottom" type="submit" name="register" value="<?php echo __('Ok', null, 'sf_guard') ?>" />
         </td>
     </tr>
 </table>

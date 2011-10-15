@@ -17,3 +17,19 @@ default:
   javascripts:    []
   has_layout:     true
   layout:         registerLayout
+showSuccess:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:    [home.css]
+
+  javascripts:    []
+  has_layout:     true
+  layout:         accountLayout

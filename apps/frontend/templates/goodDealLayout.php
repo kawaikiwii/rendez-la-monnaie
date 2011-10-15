@@ -11,15 +11,19 @@
   	<body>
 <div id="container">
 <div class="header1">
-<div class="login">
-    <?php if($sf_user->isAuthenticated()): ?>
-            <?php echo $sf_user->getUsername().' '.link_to('D&eacute;connexion', 'sf_guard_signout').'<br />';?>
-    <?php else : ?>
-        <?php
-            echo include_component('login', 'login_form');
-        ?>
-    <?php endif; ?>
-</div>
+<?php if($sf_user->isAuthenticated()): ?>
+                            <div class="login" style="width:550px;height: 25px;">
+                        <?php else : ?>
+                            <div class="login">
+                        <?php endif; ?>
+                        <?php if($sf_user->isAuthenticated()): ?>                            
+                                <?php echo 'Bienvenue '.$sf_user->getUsername().' '.link_to('Mon compte', 'sf_guard_account').' '.link_to('D&eacute;connexion', 'sf_guard_signout');?>
+                                <?php else : ?>
+                                <?php
+                                    echo include_component('login', 'login_form');
+                                ?>
+                        <?php endif; ?>
+                        </div>
 <div class="logo floatl"><a href="<?php echo url_for('@homepage') ?>"><img src="/images/logo.gif" alt="" /></a></div>
 <div class="top-links floatr">
 <ul>
