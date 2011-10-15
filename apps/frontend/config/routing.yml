@@ -17,14 +17,14 @@
 #    with_wildcard_routes: true
 
 
-#rlm_show_good_deal:
-#  url:     /bon-plans-:id
-#  class:   sfDoctrineRoute
-#  options: { model: RlmGoodDeal, type: object }
-#  param:   { module: goodDeal, action: show }
-#  requirements:
-#    id: \d+
-#    sf_method: [get]
+rlm_show_good_deal:
+  url:     /goodDeal/:title
+  class:   sfDoctrineRoute
+  options: { model: RlmGoodDeal, type: object }
+  param:   { module: goodDeal, action: show }
+  requirements:
+    title: \d+
+    sf_method: [get]
 
 #rlm_contact:
 #  class: sfDoctrineRouteCollection
@@ -84,6 +84,10 @@ sf_guard_password:
 sf_guard_register:
   url:   /register
   param: { module: sfGuardRegister, action: index }
+
+sf_guard_account:
+  url:   /account
+  param: { module: sfGuardRegister, action: show }
 
 rlm_search:
   url: /bon-plans
