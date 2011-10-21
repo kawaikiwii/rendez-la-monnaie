@@ -71,8 +71,13 @@ class contactActions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
+      $parameters = $form->getValues();
       $rlm_contact = $form->save();
-      $this->getUser()->setFlash('notice', 'Your message has been registered!');
+      //envoi mail contact motus
+      $this->getMailer()->composeAndSend($parameters["email_address"], 'kawaikiwii@gmail.com', 'Contact', '<br />nom : '.$parameters["last_name"].'<br />prénom : '.$parameters["first_name"].'<br />adresse : '.$parameters["address"].'<br />tel : '.$parameters["phone_number"].'<br />email : '.$parameters["email_address"].'<br />question : '.$parameters["question"]);
+      //envoi mail utilisateur
+      $this->getMailer()->composeAndSend("stef@motus.com", $parameters["email_address"], 'Votre question a bien &eacute;t&eacute; envoy&eacute;', '<br />nom : '.$parameters["last_name"].'<br />prénom : '.$parameters["first_name"].'<br />adresse : '.$parameters["address"].'<br />tel : '.$parameters["phone_number"].'<br />email : '.$parameters["email_address"].'<br />question : '.$parameters["question"]);
+      $this->getUser()->setFlash('notice', 'Your message has been send and registered !');
       $this->redirect('/');
       
     }
