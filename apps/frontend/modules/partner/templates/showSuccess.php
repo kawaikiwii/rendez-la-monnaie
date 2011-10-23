@@ -26,9 +26,9 @@
     </tr>
   </tbody>
 </table>
-
+<!--
 <hr />
-
-<a href="<?php echo url_for('partner/edit?id='.$rlm_partner->getId()) ?>">Edit</a>
+<a href="<?php //echo url_for('partner/edit?id='.$rlm_partner->getId()) ?>">Edit</a>
 &nbsp;
-<a href="<?php echo url_for('partner/index') ?>">List</a>
+<a href="<?php //echo url_for('partner/index') ?>">List</a>
+-->

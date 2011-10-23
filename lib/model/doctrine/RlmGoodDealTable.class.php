@@ -27,7 +27,7 @@ class RlmGoodDealTable extends Doctrine_Table
 
     	return $query->execute();
     }
-
+    
     public function searchGoodDeals(sfWebRequest $request){
 
         $query = Doctrine_Query::create()

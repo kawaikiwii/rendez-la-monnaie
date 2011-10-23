@@ -2,13 +2,13 @@
 
 <table>
   <tbody>
-    <tr>
+    <!--<tr>
       <th>Id:</th>
-      <td><?php echo $gd->getId() ?></td>
-    </tr>
+      <td><?php //echo $gd->getId() ?></td>
+    </tr>-->
     <tr>
-      <th>Partner:</th>
-      <td><?php echo $gd->getPartnerId() ?></td>
+      <th>Partenaire:</th>
+      <td><?php echo $gd->getRlmPartner()->getName() ?></td>
     </tr>
     <!--<tr>
       <th>Type:</th>
@@ -18,20 +18,20 @@
       <th>Description:</th>
       <td><?php echo $gd->getContent() ?></td>
     </tr>
-    <tr>
+    <!--<tr>
       <th>Créé le:</th>
-      <td><?php echo $gd->getCreatedAt() ?></td>
+      <td><?php //echo $gd->getCreatedAt() ?></td>
     </tr>
     <tr>
       <th>Mis à jour le:</th>
-      <td><?php echo $gd->getUpdatedAt() ?></td>
-    </tr>
+      <td><?php //echo $gd->getUpdatedAt() ?></td>
+    </tr>-->
   </tbody>
 </table>
 
-<hr />
+<!--<hr />
 
-<a href="<?php echo url_for('goodDeal/edit?id='.$gd->getId()) ?>">Editer</a>
+<a href="<?php //echo url_for('goodDeal/edit?id='.$gd->getId()) ?>">Editer</a>
 &nbsp;
-<a href="<?php echo url_for('goodDeal/index') ?>">Retour à la recherche</a>
+<a href="<?php //echo url_for('goodDeal/index') ?>">Retour à la recherche</a>-->
 <?php endforeach;?>
