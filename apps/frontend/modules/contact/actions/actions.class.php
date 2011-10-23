@@ -25,7 +25,12 @@ class contactActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
+      
     $this->form = new RlmContactForm();
+    //Si l'utilisateur est loggé, on initialise les champs par défaut
+    if($this->getUser()->isAuthenticated()){
+        $this->form->setDefaults(array("last_name"=>$this->getUser()->getGuardUser()->last_name,"first_name"=>$this->getUser()->getGuardUser()->first_name,"address"=>$this->getUser()->getGuardUser()->address,"phone_number"=>$this->getUser()->getGuardUser()->phone_number,"email_address"=>$this->getUser()->getGuardUser()->email_address));
+    }
   }
 
   public function executeCreate(sfWebRequest $request)

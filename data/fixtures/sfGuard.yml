@@ -2,6 +2,8 @@ sfGuardUser:
   User_admin:
     first_name:     Stéphane
     last_name:      PAJOT
+    address:        24 rue des charbonniers
+    phone_number:   0326669173
     email_address:  kawaikiwii@gmail.com
     username:       admin
     password:       admin
